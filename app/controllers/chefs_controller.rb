@@ -25,35 +25,34 @@ class ChefsController < ApplicationController
 	end
 
 	def show
-		
+
 		@chef_recipes = @chef.recipes.paginate(page: params[:page], per_page: 5)
 	end
 
 	def edit
-		
 	end
 
 	def update
-		
+
 		if @chef.update(chef_params)
 			flash[:success] = "Your account was updated successfully"
 			redirect_to @chef
 		else
 			render 'edit'
 		end
-
 	end
 
 	def destroy
 		if !@chef.admin?
-		@chef.destroy
-		flash[:danger] = "Chef and all associated recipes have been successfully deleted"
-		redirect_to chefs_path
+			@chef.destroy
+			flash[:danger] = "Chef and all associated recipes have been successfully deleted"
+			redirect_to chefs_path
+		end
 	end
 
 	private
 
-	
+
 
 	def chef_params
 		params.require(:chef).permit(:chefname, :email, :password, :password_confirmation)
