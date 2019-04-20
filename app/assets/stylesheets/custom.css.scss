@@ -16,6 +16,9 @@ $navbar-default-bg: black;
 	text-decoration: none;
 }
 
+.btn-xlarge{
+	background-color: #073B15;
+}
 .center{
 	text-align: center
 }
@@ -29,4 +32,38 @@ $navbar-default-bg: black;
 .footer{
 	text-align: center;
 	font-size: 1.1em;
+}
+
+.description{
+	margin-top: 0;
+}
+
+.well a{
+	color: #073B15;
+}
+
+.chef_info{
+	margin-top: 10px;
+}
+
+.colormatch a{
+	color: #073B15;
+}
+
+.recipe-actions{
+	padding-top: 5px;
+	a{
+		color: #fff;
+	}
+}
+
+.listing{
+	list-style: none;
+	padding-left: 0;
+}
+
+.chef-title{
+	color: #073B15;
+	font-weight: bold;
+	font-size: 1.25em;
 }
